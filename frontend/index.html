@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Churn Prediction</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Customer Churn Prediction</h1>
+      <p class="subtitle">
+        Enter customer details to estimate churn risk.
+      </p>
+
+      <form id="churn-form">
+        <div class="form-group">
+          <label for="tenure">Tenure (months)</label>
+          <input type="number" id="tenure" min="1" max="60" required />
+        </div>
+
+        <div class="form-group">
+          <label for="monthly_charges">Monthly Charges</label>
+          <input
+            type="number"
+            id="monthly_charges"
+            min="20"
+            max="150"
+            step="0.1"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="contract">Contract Type</label>
+          <select id="contract" required>
+            <option value="0">Month-to-month</option>
+            <option value="1">Long term</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="support_calls">Support Calls (last 3 months)</label>
+          <input type="number" id="support_calls" min="0" max="20" required />
+        </div>
+
+        <button type="submit" id="submit-btn">Predict Churn</button>
+      </form>
+
+      <div id="result" class="result hidden"></div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
