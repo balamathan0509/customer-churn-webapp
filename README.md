@@ -1,5 +1,7 @@
 # Customer Churn Prediction Web App
 
+![App Screenshot](screenshot.png)
+
 A simple end-to-end data science project that exposes a customer churn prediction model through a FastAPI backend and a minimal HTML/CSS/JS frontend.
 
 ## Tech Stack
